@@ -25,4 +25,4 @@ retq
 sar
 sub
 test
-xori
+xor
