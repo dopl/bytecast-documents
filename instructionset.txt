@@ -8,6 +8,7 @@ hlt
 jae
 jb
 je
+jmp
 jmpq
 jne
 lea
