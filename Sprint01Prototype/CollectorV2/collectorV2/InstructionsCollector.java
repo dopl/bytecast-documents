@@ -26,7 +26,7 @@ import java.util.TreeSet;
 public class InstructionsCollector {
     public static void main(String a[]) throws FileNotFoundException, IOException{
         
-        Set<String> result = new TreeSet<>();
+        Set<String> result = new TreeSet<String>();
         for(int i=0;i<a.length;++i)
         {
             String path = a[i];
@@ -71,7 +71,7 @@ public class InstructionsCollector {
 
     private static Set<String> getChildren(Map<String, List<String>> sections, String sec) {
         List<String> s = sections.get(sec);
-        Set<String> children = new LinkedHashSet<>();
+        Set<String> children = new LinkedHashSet<String>();
         for(String line: s)
         {
              String in[] = line.split("\t");
@@ -107,7 +107,7 @@ public class InstructionsCollector {
             if(list!=null)
                list.add(line);
         }
-        Set<String> set = new HashSet<>();
+        Set<String> set = new HashSet<String>();
         if(isDFS)
         {
             for(String rootsection: functionNames)
@@ -123,11 +123,11 @@ public class InstructionsCollector {
     }
 
     private static Set<String> doDFSCollection(Map<String, List<String>> sections,String rootsection) {
-        Stack<String> st = new Stack<>();
+        Stack<String> st = new Stack<String>();
         st.push(rootsection);
-        Set<String> allFunctionsCalled = new LinkedHashSet<>();
+        Set<String> allFunctionsCalled = new LinkedHashSet<String>();
         dfs(st,sections,new HashSet<String>(),allFunctionsCalled);
-        Set<String> set = new TreeSet<>();
+        Set<String> set = new TreeSet<String>();
         for(String fn : allFunctionsCalled)
         {
             List<String> ins = sections.get(fn);
@@ -145,7 +145,7 @@ public class InstructionsCollector {
     }
 
     private static Set<String> doNormalCollection(Map<String, List<String>> sections) {
-        Set<String> set = new HashSet<>();
+        Set<String> set = new HashSet<String>();
         for(String key: sections.keySet())
         {
             List<String> ins = sections.get(key);
