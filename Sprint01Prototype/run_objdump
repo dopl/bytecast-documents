@@ -1,0 +1,4 @@
+#!/bin/sh
+
+objdump -D a.out > objdump_a.out 
+objdump -D libc.so.6 > objdump_libc.so.6
