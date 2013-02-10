@@ -1,0 +1,5 @@
+http://en.wikipedia.org/wiki/X86_calling_conventions#cdecl
+	-Since GCC version 4.5, the stack must be aligned to a 16-byte boundary when calling a function
+http://en.wikipedia.org/wiki/X86_calling_conventions#Callee_clean-up
+-When the callee cleans the arguments from the stack it needs to be known at compile time how many bytes the stack needs to be adjusted. Therefore, these calling conventions are not compatible withvariable argument lists, e.g. printf().
+http://stackoverflow.com/questions/1395591/what-is-exactly-the-base-pointer-and-stack-pointer-to-what-do-they-point
