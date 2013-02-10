@@ -1,0 +1,4 @@
+#!/bin/sh
+cd collectorV2
+java InstructionsCollector "../../objdump_a.out" "../../objdump_libc.so.6" "/dfs:<__libc_start_main>,<_IO_vfprintf>"
+cd ../

@@ -1,0 +1,4 @@
+#!/bin/sh
+cd collectorV2
+javac InstructionsCollector.java
+cd ../
