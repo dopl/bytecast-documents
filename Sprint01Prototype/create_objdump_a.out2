@@ -1,0 +1,3 @@
+#!/bin/sh
+
+objdump -D -s -G -t -T -r -R -x -S -g --dwarf a.out > objdump_a.out2
