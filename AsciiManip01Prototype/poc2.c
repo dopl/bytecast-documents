@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int sum(int a, int b)
 {
 	return a + b;
@@ -17,9 +19,11 @@ int dostuff(int a, int b)
 int main(int argc, char* argv[])
 {
 	if(argc == 3){
-		return dostuff((int)argv[1][0], (int)argv[2][0]);
+		int ret = dostuff((int)argv[1][0],(int)argv[2][0]);
+		printf("The value is %d\n", ret);
 	}
 	else{
-		return -1;
+		return 1;
 	}
+	return 0;
 }
