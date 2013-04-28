@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
 	if(argc == 3){
 		int ret = dostuff((int)argv[1][0],(int)argv[2][0]);
 		printf("The value is %d\n", ret);
+		return ret;
 	}
 	else{
 		return 1;
